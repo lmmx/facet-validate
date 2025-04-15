@@ -1,6 +1,5 @@
 .git/
 target/
-
 .aiignore
 .gitignore
 Cargo.lock
