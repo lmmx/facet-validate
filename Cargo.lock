@@ -17,7 +17,7 @@ checksum = "5c8214115b7bf84099f1309324e63141d4c5d7cc26862f97a0a857dbefe165bd"
 [[package]]
 name = "facet"
 version = "0.2.0"
-source = "git+https://github.com/facet-rs/facet.git#00641afc4c4a7e1362e4882b62569463a86c3005"
+source = "git+https://github.com/lmmx/facet.git?branch=fix-map-def-getter#ce70421c86c4d3d5433105e4d52adb5b3fec49d0"
 dependencies = [
  "facet-core",
  "facet-derive",
@@ -26,7 +26,7 @@ dependencies = [
 [[package]]
 name = "facet-ansi"
 version = "0.2.0"
-source = "git+https://github.com/facet-rs/facet.git#00641afc4c4a7e1362e4882b62569463a86c3005"
+source = "git+https://github.com/lmmx/facet.git?branch=fix-map-def-getter#ce70421c86c4d3d5433105e4d52adb5b3fec49d0"
 dependencies = [
  "anstyle",
 ]
@@ -34,7 +34,7 @@ dependencies = [
 [[package]]
 name = "facet-core"
 version = "0.5.3"
-source = "git+https://github.com/facet-rs/facet.git#00641afc4c4a7e1362e4882b62569463a86c3005"
+source = "git+https://github.com/lmmx/facet.git?branch=fix-map-def-getter#ce70421c86c4d3d5433105e4d52adb5b3fec49d0"
 dependencies = [
  "bitflags",
  "impls",
@@ -43,7 +43,7 @@ dependencies = [
 [[package]]
 name = "facet-derive"
 version = "0.1.20"
-source = "git+https://github.com/facet-rs/facet.git#00641afc4c4a7e1362e4882b62569463a86c3005"
+source = "git+https://github.com/lmmx/facet.git?branch=fix-map-def-getter#ce70421c86c4d3d5433105e4d52adb5b3fec49d0"
 dependencies = [
  "facet-core",
  "unsynn",
@@ -52,7 +52,7 @@ dependencies = [
 [[package]]
 name = "facet-json"
 version = "0.2.2"
-source = "git+https://github.com/facet-rs/facet.git#00641afc4c4a7e1362e4882b62569463a86c3005"
+source = "git+https://github.com/lmmx/facet.git?branch=fix-map-def-getter#ce70421c86c4d3d5433105e4d52adb5b3fec49d0"
 dependencies = [
  "facet-ansi",
  "facet-core",
@@ -63,7 +63,7 @@ dependencies = [
 [[package]]
 name = "facet-reflect"
 version = "0.6.2"
-source = "git+https://github.com/facet-rs/facet.git#00641afc4c4a7e1362e4882b62569463a86c3005"
+source = "git+https://github.com/lmmx/facet.git?branch=fix-map-def-getter#ce70421c86c4d3d5433105e4d52adb5b3fec49d0"
 dependencies = [
  "facet-ansi",
  "facet-core",
