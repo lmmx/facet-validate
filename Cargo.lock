@@ -16,7 +16,7 @@ checksum = "5c8214115b7bf84099f1309324e63141d4c5d7cc26862f97a0a857dbefe165bd"
 
 [[package]]
 name = "facet"
-version = "0.2.0"
+version = "0.7.0"
 dependencies = [
  "facet-core",
  "facet-derive",
@@ -24,14 +24,14 @@ dependencies = [
 
 [[package]]
 name = "facet-ansi"
-version = "0.2.0"
+version = "0.7.0"
 dependencies = [
  "anstyle",
 ]
 
 [[package]]
 name = "facet-core"
-version = "0.5.3"
+version = "0.7.0"
 dependencies = [
  "bitflags",
  "impls",
@@ -39,15 +39,29 @@ dependencies = [
 
 [[package]]
 name = "facet-derive"
-version = "0.1.20"
+version = "0.7.0"
 dependencies = [
  "facet-core",
+ "facet-derive-emit",
+]
+
+[[package]]
+name = "facet-derive-emit"
+version = "0.7.0"
+dependencies = [
+ "facet-derive-parse",
+]
+
+[[package]]
+name = "facet-derive-parse"
+version = "0.7.0"
+dependencies = [
  "unsynn",
 ]
 
 [[package]]
 name = "facet-json"
-version = "0.2.2"
+version = "0.7.0"
 dependencies = [
  "facet-ansi",
  "facet-core",
@@ -57,8 +71,9 @@ dependencies = [
 
 [[package]]
 name = "facet-reflect"
-version = "0.6.2"
+version = "0.7.0"
 dependencies = [
+ "bitflags",
  "facet-ansi",
  "facet-core",
  "log",

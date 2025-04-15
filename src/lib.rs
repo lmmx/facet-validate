@@ -30,5 +30,5 @@ mod validation;
 
 // Re-export key components
 pub use error::{ValidationError, ValidationResult, has_errors};
-pub use json::{validate_json, validate_json_against_shape};
+pub use json::validate_json;
 pub use validation::validate;
