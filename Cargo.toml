@@ -1,9 +1,9 @@
+[dependencies]
+facet = {git = "https://github.com/lmmx/facet.git", version = "0.2.0", branch = "fix-map-def-getter"}
+facet-json = {git = "https://github.com/lmmx/facet.git", version = "0.2.2", branch = "fix-map-def-getter"}
+facet-reflect = {git = "https://github.com/lmmx/facet.git", version = "0.6.2", branch = "fix-map-def-getter"}
+
 [package]
 name = "facet-validate"
 version = "0.1.0"
 edition = "2024"
-
-[dependencies]
-facet = { git = "https://github.com/lmmx/facet.git", version = "0.2.0", branch = "fix-map-def-getter" }
-facet-json = { git = "https://github.com/lmmx/facet.git", version = "0.2.2", branch = "fix-map-def-getter" }
-facet-reflect = { git = "https://github.com/lmmx/facet.git", version = "0.6.2", branch = "fix-map-def-getter" }

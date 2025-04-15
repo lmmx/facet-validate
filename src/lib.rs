@@ -24,10 +24,9 @@
 /// let result = validate_json::<Person>(invalid_json);
 /// assert!(!result.is_empty());
 /// ```
-
 mod error;
-mod validation;
 mod json;
+mod validation;
 
 // Re-export key components
 pub use error::{ValidationError, ValidationResult, has_errors};

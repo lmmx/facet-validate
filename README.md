@@ -38,15 +38,15 @@ struct Address {
 fn main() {
     let json = r#"{
         "name": "Alice",
-        "age": "thirty", 
+        "age": "thirty",
         "address": {
             "street": "123 Main St",
             "city": 42
         }
     }"#;
-    
+
     let result = validate_json::<User>(json);
-    
+
     // Shows all validation errors with paths
     for error in &result {
         println!("{}: {}", error.path, error.message);

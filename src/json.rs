@@ -28,5 +28,7 @@ pub fn validate_json_against_shape(_json_str: &str, _shape: &'static Shape) -> V
     // This function would be useful for dynamic validation scenarios
     // However, facet-json doesn't have a great way to parse to "any" type
     // For real implementation, this would need more work
-    vec![ValidationError::root("Dynamic JSON validation not implemented")]
+    vec![ValidationError::root(
+        "Dynamic JSON validation not implemented",
+    )]
 }

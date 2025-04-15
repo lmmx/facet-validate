@@ -44,10 +44,10 @@ pub fn validate<'a>(
 /// Validate a struct value
 fn validate_struct<'a>(value: Peek<'a>, path: &str) -> ValidationResult {
     let mut errors = Vec::new();
-    
+
     // Try to convert to struct view
     let struct_result = value.into_struct();
-    
+
     match struct_result {
         Ok(struct_value) => {
             // Check each field
@@ -64,7 +64,7 @@ fn validate_struct<'a>(value: Peek<'a>, path: &str) -> ValidationResult {
             ));
         }
     }
-    
+
     errors
 }
 
@@ -73,12 +73,12 @@ fn validate_list<'a>(value: Peek<'a>, path: &str) -> ValidationResult {
     let mut errors = Vec::new();
 
     let list_result = value.into_list();
-    
+
     match list_result {
         Ok(list_value) => {
             // Get element shape from list definition
             let element_shape = list_value.def().t();
-            
+
             // Check each element
             for (index, element) in list_value.iter().enumerate() {
                 let element_path = format!("{}[{}]", path, index);
@@ -102,18 +102,18 @@ fn validate_map<'a>(value: Peek<'a>, path: &str) -> ValidationResult {
     let mut errors = Vec::new();
 
     let map_result = value.into_map();
-    
+
     match map_result {
         Ok(map_value) => {
             // Get value shape from map definition
             let value_shape = map_value.def().v;
-            
+
             // Check each entry
             for (key, val) in &map_value {
                 // For simplicity, we'll use key's string representation for the path
                 let key_str = format!("{}", key);
                 let entry_path = build_path(path, &key_str);
-                
+
                 let value_errors = validate(val, value_shape, &entry_path);
                 errors.extend(value_errors);
             }
@@ -134,12 +134,12 @@ fn validate_enum<'a>(value: Peek<'a>, path: &str) -> ValidationResult {
     let mut errors = Vec::new();
 
     let enum_result = value.into_enum();
-    
+
     match enum_result {
         Ok(enum_value) => {
             // Get active variant and validate its fields
             let variant = enum_value.active_variant();
-            
+
             for (index, field) in variant.data.fields.iter().enumerate() {
                 if let Some(field_value) = enum_value.field(index) {
                     let field_path = build_path(path, field.name);

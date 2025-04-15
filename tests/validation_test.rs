@@ -31,9 +31,9 @@ fn test_valid_json() {
 fn test_invalid_simple_json() {
     let invalid_json = r#"{"foo": "not a number", "bar": 42}"#;
     let result = validate_json::<FooBar>(invalid_json);
-    
+
     assert_eq!(result.len(), 2, "Expected exactly 2 validation errors");
-    
+
     // Check paths are correct
     let paths: Vec<_> = result.iter().map(|e| &e.path).collect();
     assert!(paths.contains(&&"foo".to_string()));
@@ -50,11 +50,11 @@ fn test_nested_validation() {
             "city": 42
         }
     }"#;
-    
+
     let result = validate_json::<User>(invalid_json);
-    
+
     assert_eq!(result.len(), 2, "Expected exactly 2 validation errors");
-    
+
     // Check paths are correct
     let paths: Vec<_> = result.iter().map(|e| &e.path).collect();
     assert!(paths.contains(&&"age".to_string()));
@@ -65,7 +65,7 @@ fn test_nested_validation() {
 fn test_missing_fields() {
     let incomplete_json = r#"{"foo": 42}"#;
     let result = validate_json::<FooBar>(incomplete_json);
-    
+
     assert_eq!(result.len(), 1, "Expected exactly 1 validation error");
     assert_eq!(result[0].path, "bar");
 }
