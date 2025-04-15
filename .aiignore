@@ -1,3 +1,4 @@
+.git/
 .aiignore
 .gitignore
 Cargo.lock
