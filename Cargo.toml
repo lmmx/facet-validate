@@ -4,4 +4,6 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-facet = "0.2.0"
+facet = { git = "https://github.com/facet-rs/facet.git", version = "0.2.0" }
+facet-json = { git = "https://github.com/facet-rs/facet.git", version = "0.2.2" }
+facet-reflect = { git = "https://github.com/facet-rs/facet.git", version = "0.6.2" }

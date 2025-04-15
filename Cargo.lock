@@ -3,6 +3,12 @@
 version = 4
 
 [[package]]
+name = "anstyle"
+version = "1.0.10"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "55cc3b69f167a1ef2e161439aa98aed94e6028e5f9a59be9a6ffb47aef1651f9"
+
+[[package]]
 name = "bitflags"
 version = "2.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -11,18 +17,24 @@ checksum = "5c8214115b7bf84099f1309324e63141d4c5d7cc26862f97a0a857dbefe165bd"
 [[package]]
 name = "facet"
 version = "0.2.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7ec692e89973dc1759e131424a7e8f4677d46d953219ef631a784a270f58dde6"
+source = "git+https://github.com/facet-rs/facet.git#00641afc4c4a7e1362e4882b62569463a86c3005"
 dependencies = [
  "facet-core",
  "facet-derive",
 ]
 
 [[package]]
+name = "facet-ansi"
+version = "0.2.0"
+source = "git+https://github.com/facet-rs/facet.git#00641afc4c4a7e1362e4882b62569463a86c3005"
+dependencies = [
+ "anstyle",
+]
+
+[[package]]
 name = "facet-core"
 version = "0.5.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "49950131d69ca20f4f3c8872e9c57814551337cc9fbc521e602ab43f468e0365"
+source = "git+https://github.com/facet-rs/facet.git#00641afc4c4a7e1362e4882b62569463a86c3005"
 dependencies = [
  "bitflags",
  "impls",
@@ -31,11 +43,31 @@ dependencies = [
 [[package]]
 name = "facet-derive"
 version = "0.1.20"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9b1a35cc325737c87a77820b6cceed0f471bdd594a8429822b155a70ad2326f6"
+source = "git+https://github.com/facet-rs/facet.git#00641afc4c4a7e1362e4882b62569463a86c3005"
 dependencies = [
  "facet-core",
  "unsynn",
+]
+
+[[package]]
+name = "facet-json"
+version = "0.2.2"
+source = "git+https://github.com/facet-rs/facet.git#00641afc4c4a7e1362e4882b62569463a86c3005"
+dependencies = [
+ "facet-ansi",
+ "facet-core",
+ "facet-reflect",
+ "log",
+]
+
+[[package]]
+name = "facet-reflect"
+version = "0.6.2"
+source = "git+https://github.com/facet-rs/facet.git#00641afc4c4a7e1362e4882b62569463a86c3005"
+dependencies = [
+ "facet-ansi",
+ "facet-core",
+ "log",
 ]
 
 [[package]]
@@ -43,6 +75,8 @@ name = "facet-validate"
 version = "0.1.0"
 dependencies = [
  "facet",
+ "facet-json",
+ "facet-reflect",
 ]
 
 [[package]]
@@ -50,6 +84,12 @@ name = "impls"
 version = "1.0.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7a46645bbd70538861a90d0f26c31537cdf1e44aae99a794fb75a664b70951bc"
+
+[[package]]
+name = "log"
+version = "0.4.27"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "13dc2df351e3202783a1fe0d44375f7295ffb4049267b0f3018346dc122a1d94"
 
 [[package]]
 name = "mutants"
