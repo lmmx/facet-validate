@@ -31,7 +31,7 @@ struct FooBar {
 }
 
 fn main() {
-    // Using a simple, compact JSON string
+    // Using a simple, valid JSON string
     let json = r#"{"foo": 42, "bar": "Hello, World!"}"#;
 
     let result = validate_json::<FooBar>(json);
