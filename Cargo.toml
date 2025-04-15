@@ -1,11 +1,15 @@
 [dependencies]
-facet = {git = "https://github.com/lmmx/facet.git", version = "0.2.0", branch = "feat-deserialise-string-affinity"}
-facet-json = {git = "https://github.com/lmmx/facet.git", version = "0.2.2", branch = "feat-deserialise-string-affinity"}
-facet-reflect = {git = "https://github.com/lmmx/facet.git", version = "0.6.2", branch = "feat-deserialise-string-affinity"}
+#facet = {git = "https://github.com/facet-rs/facet.git", version = "0.2.0", branch = "more-json"}
+#facet-json = {git = "https://github.com/facet-rs/facet.git", version = "0.2.2", branch = "more-json"}
+#facet-reflect = {git = "https://github.com/facet-rs/facet.git", version = "0.6.2", branch = "more-json"}
 
-#facet = { path = "../facet/facet", version = "0.2.0"}
-#facet-json = { path = "../facet/facet-json/", version = "0.2.2" }
-#facet-reflect = { path = "../facet/facet-reflect/", version = "0.6.2"}
+facet = { path = "../facet/facet", version = "0.7.0"}
+facet-json = { path = "../facet/facet-json/", version = "0.7.0" }
+facet-reflect = { path = "../facet/facet-reflect/", version = "0.7.0"}
+
+#facet = { version = "0.7.0"}
+#facet-json = { version = "0.7.0" }
+#facet-reflect = { version = "0.7.0"}
 
 [package]
 name = "facet-validate"

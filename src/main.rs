@@ -27,8 +27,12 @@ fn main() {
     
     let result = validate_json::<FooBar>(invalid_json);
     
-    println!("\nValidation of invalid JSON:");
-    for error in &result {
-        println!("{}: {}", error.path, error.message);
+    println!("\nValidation of invalid JSON by JSON reader:");
+    if result.is_empty() {
+        println!("No validation errors detected. The JSON validation didn't work!");
+    } else {
+        for error in &result {
+            println!("{}: {}", error.path, error.message);
+        }
     }
 }

@@ -1,6 +1,6 @@
 //! JSON-specific validation
 
-use facet::{Facet, Shape};
+use facet::Facet;
 use facet_json::{self, from_str};
 use facet_reflect::Peek;
 
@@ -21,14 +21,4 @@ pub fn validate_json<T: Facet>(json_str: &str) -> ValidationResult {
             vec![ValidationError::root(format!("JSON parsing error: {}", e))]
         }
     }
-}
-
-/// Try to parse JSON without a specific target type, then validate against shape
-pub fn validate_json_against_shape(_json_str: &str, _shape: &'static Shape) -> ValidationResult {
-    // This function would be useful for dynamic validation scenarios
-    // However, facet-json doesn't have a great way to parse to "any" type
-    // For real implementation, this would need more work
-    vec![ValidationError::root(
-        "Dynamic JSON validation not implemented",
-    )]
 }
