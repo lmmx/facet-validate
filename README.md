@@ -18,41 +18,44 @@ and their types.
 
 ## Example
 
+The `main.rs` module will run the following demo:
+
 ```rust
 use facet::Facet;
 use facet_validate::validate_json;
 
 #[derive(Facet)]
-struct User {
-    name: String,
-    age: u32,
-    address: Address,
-}
-
-#[derive(Facet)]
-struct Address {
-    street: String,
-    city: String,
+struct FooBar {
+    foo: u64,
+    bar: String,
 }
 
 fn main() {
-    let json = r#"{
-        "name": "Alice",
-        "age": "thirty",
-        "address": {
-            "street": "123 Main St",
-            "city": 42
+    // Using a simple, compact JSON string
+    let json = r#"{"foo": 42, "bar": "Hello, World!"}"#;
+
+    let result = validate_json::<FooBar>(json);
+
+    if result.is_empty() {
+        println!("Validation successful!");
+    } else {
+        println!("Validation errors:");
+        for error in &result {
+            println!("{}: {}", error.path, error.message);
         }
-    }"#;
+    }
 
-    let result = validate_json::<User>(json);
-
-    // Shows all validation errors with paths
+    // Let's also try an invalid JSON to see error handling
+    let invalid_json = r#"{"foo": 42, "bar": 42}"#;
+    
+    let result = validate_json::<FooBar>(invalid_json);
+    
+    println!("\nValidation of invalid JSON:");
     for error in &result {
         println!("{}: {}", error.path, error.message);
     }
-    // Output:
-    // age: Type mismatch: expected u32, got string
-    // address.city: Type mismatch: expected String, got number
 }
 ```
+
+- The first of these will say "Validation successful!"
+- The second of these will panic (for now), WIP...
