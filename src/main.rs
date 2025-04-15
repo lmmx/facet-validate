@@ -1,5 +1,5 @@
 use facet::Facet;
-use facet_validate::validate_json;
+use facet_validate::{validate_json, validate_json_against_shape};
 
 #[derive(Facet)]
 struct FooBar {
@@ -27,8 +27,12 @@ fn main() {
     
     let result = validate_json::<FooBar>(invalid_json);
     
-    println!("\nValidation of invalid JSON:");
-    for error in &result {
-        println!("{}: {}", error.path, error.message);
+    println!("\nValidation of invalid JSON by JSON reader:");
+    if result.is_empty() {
+        println!("No validation errors detected. This could be valid JSON.");
+    } else {
+        for error in &result {
+            println!("{}: {}", error.path, error.message);
+        }
     }
 }
