@@ -58,4 +58,4 @@ fn main() {
 ```
 
 - The first of these will say "Validation successful!"
-- The second of these will panic (for now), WIP...
+- The second of these will say "Validation of invalid JSON:" (but no explanation yet)

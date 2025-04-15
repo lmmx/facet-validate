@@ -1,7 +1,11 @@
 [dependencies]
-facet = {git = "https://github.com/lmmx/facet.git", version = "0.2.0", branch = "fix-map-def-getter"}
-facet-json = {git = "https://github.com/lmmx/facet.git", version = "0.2.2", branch = "fix-map-def-getter"}
-facet-reflect = {git = "https://github.com/lmmx/facet.git", version = "0.6.2", branch = "fix-map-def-getter"}
+facet = {git = "https://github.com/lmmx/facet.git", version = "0.2.0", branch = "feat-deserialise-string-affinity"}
+facet-json = {git = "https://github.com/lmmx/facet.git", version = "0.2.2", branch = "feat-deserialise-string-affinity"}
+facet-reflect = {git = "https://github.com/lmmx/facet.git", version = "0.6.2", branch = "feat-deserialise-string-affinity"}
+
+#facet = { path = "../facet/facet", version = "0.2.0"}
+#facet-json = { path = "../facet/facet-json/", version = "0.2.2" }
+#facet-reflect = { path = "../facet/facet-reflect/", version = "0.6.2"}
 
 [package]
 name = "facet-validate"
