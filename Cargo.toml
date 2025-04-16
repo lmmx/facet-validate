@@ -3,9 +3,9 @@
 #facet-json = {git = "https://github.com/facet-rs/facet.git", version = "0.2.2", branch = "more-json"}
 #facet-reflect = {git = "https://github.com/facet-rs/facet.git", version = "0.6.2", branch = "more-json"}
 
-facet = { path = "../facet/facet", version = "0.7.0"}
-facet-json = { path = "../facet/facet-json/", version = "0.7.0" }
-facet-reflect = { path = "../facet/facet-reflect/", version = "0.7.0"}
+facet = { path = "../facet/facet", version = "0.8.0"}
+facet-json = { path = "../facet/facet-json/", version = "0.8.0" }
+facet-reflect = { path = "../facet/facet-reflect/", version = "0.8.0"}
 
 #facet = { version = "0.7.0"}
 #facet-json = { version = "0.7.0" }

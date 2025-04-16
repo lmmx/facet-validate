@@ -3,10 +3,14 @@
 version = 4
 
 [[package]]
-name = "anstyle"
-version = "1.0.10"
+name = "ariadne"
+version = "0.5.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "55cc3b69f167a1ef2e161439aa98aed94e6028e5f9a59be9a6ffb47aef1651f9"
+checksum = "36f5e3dca4e09a6f340a61a0e9c7b61e030c69fc27bf29d73218f7e5e3b7638f"
+dependencies = [
+ "unicode-width",
+ "yansi",
+]
 
 [[package]]
 name = "bitflags"
@@ -16,22 +20,15 @@ checksum = "5c8214115b7bf84099f1309324e63141d4c5d7cc26862f97a0a857dbefe165bd"
 
 [[package]]
 name = "facet"
-version = "0.7.0"
+version = "0.8.0"
 dependencies = [
  "facet-core",
  "facet-derive",
 ]
 
 [[package]]
-name = "facet-ansi"
-version = "0.7.0"
-dependencies = [
- "anstyle",
-]
-
-[[package]]
 name = "facet-core"
-version = "0.7.0"
+version = "0.8.0"
 dependencies = [
  "bitflags",
  "impls",
@@ -39,7 +36,7 @@ dependencies = [
 
 [[package]]
 name = "facet-derive"
-version = "0.7.0"
+version = "0.8.0"
 dependencies = [
  "facet-core",
  "facet-derive-emit",
@@ -47,36 +44,37 @@ dependencies = [
 
 [[package]]
 name = "facet-derive-emit"
-version = "0.7.0"
+version = "0.8.0"
 dependencies = [
  "facet-derive-parse",
 ]
 
 [[package]]
 name = "facet-derive-parse"
-version = "0.7.0"
+version = "0.8.0"
 dependencies = [
  "unsynn",
 ]
 
 [[package]]
 name = "facet-json"
-version = "0.7.0"
+version = "0.8.0"
 dependencies = [
- "facet-ansi",
+ "ariadne",
  "facet-core",
  "facet-reflect",
  "log",
+ "yansi",
 ]
 
 [[package]]
 name = "facet-reflect"
-version = "0.7.0"
+version = "0.8.0"
 dependencies = [
  "bitflags",
- "facet-ansi",
  "facet-core",
  "log",
+ "yansi",
 ]
 
 [[package]]
@@ -128,6 +126,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5a5f39404a5da50712a4c1eecf25e90dd62b613502b7e925fd4e4d19b5c96512"
 
 [[package]]
+name = "unicode-width"
+version = "0.1.14"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7dd6e30e90baa6f72411720665d41d89b9a3d039dc45b8faea1ddd07f617f6af"
+
+[[package]]
 name = "unsynn"
 version = "0.0.26"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -137,3 +141,9 @@ dependencies = [
  "proc-macro2",
  "shadow_counted",
 ]
+
+[[package]]
+name = "yansi"
+version = "1.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "cfe53a6657fd280eaa890a3bc59152892ffa3e30101319d168b781ed6529b049"
