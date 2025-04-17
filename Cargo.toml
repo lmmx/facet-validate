@@ -1,11 +1,11 @@
 [dependencies]
-facet = {git = "https://github.com/facet-rs/facet.git", version = "0.8.0", branch = "main"}
-facet-json = {git = "https://github.com/facet-rs/facet.git", version = "0.8.0", branch = "main"}
-facet-reflect = {git = "https://github.com/facet-rs/facet.git", version = "0.8.0", branch = "main"}
+# facet = {git = "https://github.com/facet-rs/facet.git", version = "0.8.0", branch = "main"}
+# facet-json = {git = "https://github.com/facet-rs/facet.git", version = "0.8.0", branch = "main"}
+# facet-reflect = {git = "https://github.com/facet-rs/facet.git", version = "0.8.0", branch = "main"}
 
-# facet = { path = "../facet/facet", version = "0.8.0"}
-# facet-json = { path = "../facet/facet-json/", version = "0.8.0" }
-# facet-reflect = { path = "../facet/facet-reflect/", version = "0.8.0"}
+facet = { path = "../facet/facet" }
+facet-json = { path = "../facet/facet-json/" }
+facet-reflect = { path = "../facet/facet-reflect/" }
 
 #facet = { version = "0.7.0"}
 #facet-json = { version = "0.7.0" }

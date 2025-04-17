@@ -20,8 +20,7 @@ checksum = "5c8214115b7bf84099f1309324e63141d4c5d7cc26862f97a0a857dbefe165bd"
 
 [[package]]
 name = "facet"
-version = "0.8.0"
-source = "git+https://github.com/facet-rs/facet.git?branch=main#9dc627dd800ab59c4574d2184eb33d5fd9e84491"
+version = "0.8.2"
 dependencies = [
  "facet-core",
  "facet-derive",
@@ -29,8 +28,7 @@ dependencies = [
 
 [[package]]
 name = "facet-core"
-version = "0.8.0"
-source = "git+https://github.com/facet-rs/facet.git?branch=main#9dc627dd800ab59c4574d2184eb33d5fd9e84491"
+version = "0.8.2"
 dependencies = [
  "bitflags",
  "impls",
@@ -38,8 +36,7 @@ dependencies = [
 
 [[package]]
 name = "facet-derive"
-version = "0.8.0"
-source = "git+https://github.com/facet-rs/facet.git?branch=main#9dc627dd800ab59c4574d2184eb33d5fd9e84491"
+version = "0.8.2"
 dependencies = [
  "facet-core",
  "facet-derive-emit",
@@ -47,24 +44,21 @@ dependencies = [
 
 [[package]]
 name = "facet-derive-emit"
-version = "0.8.0"
-source = "git+https://github.com/facet-rs/facet.git?branch=main#9dc627dd800ab59c4574d2184eb33d5fd9e84491"
+version = "0.8.2"
 dependencies = [
  "facet-derive-parse",
 ]
 
 [[package]]
 name = "facet-derive-parse"
-version = "0.8.0"
-source = "git+https://github.com/facet-rs/facet.git?branch=main#9dc627dd800ab59c4574d2184eb33d5fd9e84491"
+version = "0.8.2"
 dependencies = [
  "unsynn",
 ]
 
 [[package]]
 name = "facet-json"
-version = "0.8.0"
-source = "git+https://github.com/facet-rs/facet.git?branch=main#9dc627dd800ab59c4574d2184eb33d5fd9e84491"
+version = "0.8.2"
 dependencies = [
  "ariadne",
  "facet-core",
@@ -75,8 +69,7 @@ dependencies = [
 
 [[package]]
 name = "facet-reflect"
-version = "0.8.0"
-source = "git+https://github.com/facet-rs/facet.git?branch=main#9dc627dd800ab59c4574d2184eb33d5fd9e84491"
+version = "0.8.2"
 dependencies = [
  "bitflags",
  "facet-core",
