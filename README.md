@@ -47,9 +47,9 @@ fn main() {
 
     // Let's also try an invalid JSON to see error handling
     let invalid_json = r#"{"foo": 42, "bar": 42}"#;
-    
+
     let result = validate_json::<FooBar>(invalid_json);
-    
+
     println!("\nValidation of invalid JSON:");
     for error in &result {
         println!("{}: {}", error.path, error.message);
