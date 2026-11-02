@@ -1,7 +1,7 @@
 [dependencies]
-facet = {path = "../facet/facet"}
-facet-json = {path = "../facet/facet-json/"}
-facet-reflect = {path = "../facet/facet-reflect/"}
+facet = { path = "../facet/facet" }
+facet-json = { path = "../facet/facet-json/" }
+facet-reflect = { path = "../facet/facet-reflect/" }
 
 [package]
 name = "facet-validate"
